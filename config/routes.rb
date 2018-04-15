@@ -7,4 +7,7 @@ get '/login' => 'sessions#new'
 post '/login' => 'sessions#create'
 get '/logout' => 'sessions#destroy'
 
+get '/welcome' => 'welcome#new'
+post '/welcome' => 'welcome#create'
+
 end
