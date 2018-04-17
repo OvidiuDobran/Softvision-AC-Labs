@@ -1,5 +1,13 @@
+<div class="card card-body text-center">
+
 <% if flash[:allert] %>
 		<p id="notice"><%= flash[:allert] %></p>
 		<% end %>
 
-<p> Welcome! </p>
+<p style="font-size: 20px;"> <b>Welcome!</b> </p>
+
+<p>
+	<%= link_to 'Log Out', logout_url %>
+</p>
+
+</div>

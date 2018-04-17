@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
 
 	def new
+		if session[:user_id]!=nil
+			redirect_to '/welcome'
+		end
 	end
 
 	def create
@@ -21,4 +24,5 @@ class SessionsController < ApplicationController
 
 	end
 
+	
 end
