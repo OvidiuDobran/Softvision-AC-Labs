@@ -23,8 +23,12 @@ class CurrenciesController < ApplicationController
   end
 
   # GET /currencies/new
-  def new
-    @currency = Currency.new
+  def new   
+    if session[:user_id]==nil
+      redirect_to '/login'
+    else
+      @currency = Currency.new
+    end
   end
 
   # GET /currencies/1/edit

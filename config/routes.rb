@@ -17,4 +17,8 @@ get '/logout' => 'sessions#destroy'
 get '/welcome' => 'welcome#new'
 post '/welcome' => 'welcome#create'
 
+get '/currencies' => 'currencies#new'
+post '/currencies' => 'currencies#create'
+
+
 end
