@@ -11,6 +11,18 @@ class CurrenciesController < ApplicationController
   # GET /currencies/1
   # GET /currencies/1.json
   def show
+    
+  end
+
+  def get_amounts
+    amounts=[]
+    current_user.amounts.each do |amount|   
+    puts amount.to_yaml
+    if amount.quantity>0   
+      amounts << [amount.currency.name, amount.quantity * amount.currency.price]
+      end
+    end
+    render json:{key: amounts}
   end
 
   def open_modal
@@ -22,7 +34,7 @@ class CurrenciesController < ApplicationController
     amount = params[:amount]
     Amount.create(
       currency_id: @currency.id,
-      quantity: amount,
+      quantity: amount.to_f,
       user_id: current_user.id
     )
     redirect_to currencies_path, notice:'Succesfully bought some coins'

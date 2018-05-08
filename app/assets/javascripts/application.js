@@ -13,4 +13,6 @@
 //=	require bootstrap-sprockets
 //= require rails-ujs
 //= require turbolinks
+//= require C3/c3.min.js
+//= require C3/d3-4.13.0.min.js
 //= require_tree .

@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   	member do
   		post 'buy', to:'currencies#buy'
   		get 'open_modal', to:'currencies#open_modal'
+  		
+  	end
+  	collection do 
+  		get 'get_amounts', to:'currencies#get_amounts'
   	end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
