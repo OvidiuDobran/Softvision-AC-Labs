@@ -22,6 +22,9 @@ post '/welcome' => 'welcome#create'
 
 get '/currencies' => 'currencies#new'
 post '/currencies' => 'currencies#create'
+
+post '/application' => 'application#create'
+
 root to: 'dashboard#index'
 
 end
